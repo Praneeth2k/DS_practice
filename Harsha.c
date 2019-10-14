@@ -22,11 +22,11 @@ int main(){
     head->next=NULL;
 
     do{
-        printf("Click on new website:1\nWebsite name on Xth click:2\nExit:3\n");
+        printf("Click on new link:1\nWeb page name on Xth click:2\nExit:3\n");
         scanf("%d",&ch);
         
         switch(ch){
-            case 1:printf("Enter the name of the website you wnat to go into\n");
+            case 1:printf("Enter the link of the web page you want to go into\n");
                    scanf("%s",web);
                    head=insert_front(head,web,&N);break;
             case 2:printf("Enter the value of X\n");
@@ -35,7 +35,7 @@ int main(){
                    for(i=0;i<N-x;i++){
                         s=s->next;
                     } 
-                    printf("The website that you were on after %d clicks is %s",x,s->name);
+                    printf("The web page that you were on after %d clicks is %s",x,s->name);
                     break;
             case 3:exit(0);
             default:printf("Wrong input\n");
